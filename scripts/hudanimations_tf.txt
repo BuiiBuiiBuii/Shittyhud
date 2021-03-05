@@ -206,9 +206,9 @@ event KeyHintMessageHide
 //Health Bonus Pulse
 event HudHealthBonusPulse
 {
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"		Linear 0.0 0.2
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"			Linear 0.0 0.2
 	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"			Linear 0.2 0.4
-	Animate PlayerStatusHealthValue	 	fgcolor 	"10 233 245 100"	Linear 0.0 0.0
+	Animate PlayerStatusHealthValue		fgcolor 	"0 238 255 100" 		Linear 0.0 0.0
 	RunEvent HudHealthBonusPulseLoop	0.4
 }
 
@@ -222,7 +222,8 @@ event HudHealthBonusPulseStop
 {
 	StopEvent HudHealthBonusPulse 0.0
 	StopEvent HudHealthBonusPulseLoop 0.0
-	Animate PlayerStatusHealthValue	 	fgcolor 	"255 255 255 100"	Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValue		fgcolor 	"White" 		Linear 0.0 0.0
 }
 
 //===========================================
@@ -232,7 +233,8 @@ event HudHealthDyingPulse
 {
 	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"		Linear 0.0 0.075
 	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"			Linear 0.125 0.075
-	Animate PlayerStatusHealthValue		fgcolor 	"214 19 19 100"
+	
+	Animate PlayerStatusHealthValue		fgcolor 	"255 0 0 100" 		Linear 0.0 0.0
 	RunEvent HudHealthDyingPulseLoop	0.25
 }
 
@@ -246,17 +248,19 @@ event HudHealthDyingPulseStop
 {
 	StopEvent HudHealthDyingPulse 0.0
 	StopEvent HudHealthDyingPulseLoop 0.0
-	Animate	  PlayerStatusHealthValue	"255 255 255 100"
+	
+	Animate PlayerStatusHealthValue		fgcolor 	"White" 		Linear 0.0 0.0
 }
 
 //===========================================
 
 event HudLowAmmoPulse
 {
-
-	Animate AmmoInClip		fgcolor "214 19 19 100"		Linear 0.0 0.0
-	Animate AmmoInReserve		fgcolor "214 19 19 100"		Linear 0.0 0.0
-	Animate AmmoNoClip		fgcolor "214 19 19 100"		Linear 0.0 0.0
+	Animate	HudWeaponLowAmmoImage		Alpha		"255"		Linear 0.0 0.075
+	Animate	HudWeaponLowAmmoImage		Alpha		"0"			Linear 0.125 0.075
+	Animate AmmoInClip		fgcolor 	"255 0 0 100" 		Linear 0.0 0.0
+	Animate AmmoInReserve		fgcolor 	"255 0 0 100" 		Linear 0.0 0.0
+	Animate AmmoNoClip		fgcolor 	"255 0 0 100" 		Linear 0.0 0.0	
 	RunEvent HudLowAmmoPulseLoop	0.25
 }
 
@@ -270,9 +274,9 @@ event HudLowAmmoPulseStop
 {
 	StopEvent HudLowAmmoPulse 0.0
 	StopEvent HudLowAmmoPulseLoop 0.0
-	Animate AmmoInClip		fgcolor "255 255 255 100"	
-	Animate AmmoInReserve		fgcolor "255 255 255 100"		
-	Animate AmmoNoClip		fgcolor "214 255 255 100"
+	Animate AmmoNoClip		fgcolor 	"White" 		Linear 0.0 0.0
+	Animate AmmoInClip		fgcolor 	"White" 		Linear 0.0 0.0
+	Animate AmmoInReserve		fgcolor 	"White" 		Linear 0.0 0.0	
 }
 
 //===========================================
